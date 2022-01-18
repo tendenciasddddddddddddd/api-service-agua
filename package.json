@@ -1,7 +1,7 @@
 {
   "name": "company-products-api",
   "version": "1.0.1",
-  "description": "A Company REST API with authentication and authorization",
+  "description": "API REST con autenticación y autorización",
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon src/index.js --exec babel-node",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/FaztWeb/company-products-api.git"
   },
   "keywords": [],
-  "author": "Fazt",
+  "author": "Liz Yanez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FaztWeb/company-products-api/issues"
