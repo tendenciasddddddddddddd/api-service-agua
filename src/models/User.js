@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 
 const productSchema = new Schema(
   {
+    //---DATA GENERAL PARA TODOS LOS USUARIOS HANDLE ADMIN
     username: {
       type: String,
       unique: true,
@@ -21,6 +22,28 @@ const productSchema = new Schema(
         ref: "Role",
       },
     ],
+    //--PLANILLERO
+    cedula: {
+      type: String,
+    },
+    fkparroquia: 
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Parroquia",
+      },
+      fkbarrio: 
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Barrio",
+      },
+      direccion: {
+        type: String,
+      },
+      categoria: {
+        type: String,
+      },
+      // USUARIOS NORMALES
+
   },
   {
     timestamps: true,

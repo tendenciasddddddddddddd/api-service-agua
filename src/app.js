@@ -7,7 +7,7 @@ import pkg from "../package.json";
 
 import usersRoutes from "./routes/user.routes";
 import authRoutes from "./routes/auth.routes";
-
+import parroquiasRoutes from "./routes/parroquias.routes";
 import { createRoles, createAdmin} from "./libs/initialSetup";
 
 const app = express();
@@ -43,5 +43,6 @@ app.get("/", (req, res) => {
 
 app.use("/api/users", usersRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/parroquias", parroquiasRoutes);
 
 export default app;

@@ -15,6 +15,7 @@ export const createRoles = async () => {
     const values = await Promise.all([
       new Role({ name: "user" }).save(),
       new Role({ name: "admin" }).save(),
+      new Role({ name: "planillero" }).save(),
     ]);
 
     console.log(values);
@@ -25,7 +26,7 @@ export const createRoles = async () => {
 
 export const createAdmin = async () => {
   // check for an existing admin user
-  const user = await User.findOne({ email: "admin@localhost" });
+  const user = await User.findOne({ email: "admin.localhost@gmail.com" });
   // get roles _id
   const roles = await Role.find({ name: { $in: ["admin", "user"] } });
 
